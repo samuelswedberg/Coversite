@@ -1,0 +1,232 @@
+/* Fix font scaling */
+/* Fix p2 */
+h1 {
+    font-size: 6rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+@media (max-width:991px) {
+    h1 {
+        font-size: calc(1vw + 2rem);
+    }
+    h2 {
+        font-size: calc(1vw + 1.5rem);
+        margin: 0px;
+    }
+    h3 {
+        font-size: calc(0.5vw + 1rem);
+        margin-bottom: 25px;
+    }
+    p {
+        font-size: calc(0.5vw + 1rem);
+    }
+}
+
+
+.hero {
+    width: 100%;
+    text-align: center;
+    font-family: "Light";
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(321deg, rgba(2,0,36,0.29850672468354433) 0%, rgba(9,9,121,0.3080003955696202) 35%, rgba(0,212,255,0.3238231803797469) 100%);
+    box-shadow: inset 0px -15px 15px -15px #808080;
+    color: #fff;
+}
+
+.hero ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+.hero li a {
+    margin: 10px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.hero li a:hover{
+    transform: scale(1.25);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+@media screen and (max-width: 1168px) {
+    .wrapper {
+        display: grid;
+        padding-top: 0;
+    }
+}
+
+.aboutContent {
+    padding: 20px;
+    background-color: #fff;
+    margin: 50px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.resume {
+    background: linear-gradient(321deg, rgba(2,0,36,0.29850672468354433) 0%, rgba(9,9,121,0.3080003955696202) 35%, rgba(0,212,255,0.3238231803797469) 100%);
+    width: 200px;
+    color: #000;
+    font-family: "Medium";
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: all .2s ease-in-out;
+}
+
+.resume:hover{
+    transform: scale(1.05);
+}
+    
+.section {
+    width: 100%;
+    text-align: center;
+    font-family: "Light";
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.skillsContent {
+    padding: 20px;
+    border-radius: 25px;
+    background-color: #fff;
+    margin: 50px;
+    box-shadow: 0px 7px 10px 0px #808080;
+}
+
+.skillsContent ul {
+    display: block;
+    column-count: 2;
+    margin: 0;
+}
+
+.skillsContent li {
+    padding: 10px;
+    padding-left: 0;
+    text-align: left;
+    
+}
+
+.projectsContent {
+    border-radius: 25px;
+    margin: 50px;
+    background-color: #fff;
+    box-shadow: 0px 7px 10px -5px #808080;
+    width: 500px;
+}
+
+@media screen and (max-width: 700px) {
+    .projectsContent {
+        width: 300px;
+        transition: transform .2s ease-in-out;
+    }
+    .projectsContent:hover{
+        transform: scale(1.05);
+    }
+    .projectsImage {
+        width: 300px;
+    }
+    .projectsImage img{
+        width: 300px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1168px) {
+    .projectsContent {
+        transition: transform .2s ease-in-out;
+    }
+    .projectsContent:hover{
+        transform: scale(1.05);
+    }
+    .projectsImage img {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1168px) {
+    .projectsContent {
+        transition: transform .2s ease-in-out;
+    }
+    .projectsContent:hover{
+        transform: scale(1.05);
+    }
+    .projectsImage {
+        width: 500px;
+    }
+    .projectsImage img {
+        max-width: 100%;
+        height: 300px;
+    }
+    
+}
+
+.projectsImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+}
+
+.projectsImage img {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.projectsContent a, a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+.projectsText h3 {
+    padding-bottom: 10px;
+    margin: 0;
+    color: #000;
+}
+
+.projectsText p {
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+
+.projectsText {
+    padding: 20px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
