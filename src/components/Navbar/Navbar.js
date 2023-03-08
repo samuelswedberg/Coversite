@@ -1,5 +1,5 @@
-import { Nav, NavLink, Bars, NavMenu, NavLogo, Separator, NavMenuMobile, NavLinkMobile} from './NavbarElements';
-import {Link} from 'react-scroll'
+import { Nav, NavLink, Bars, Cross, NavMenu, NavLogo, NavMenuMobile, NavLinkMobile} from './NavbarElements';
+// import {Link} from 'react-scroll'
 import React, { useState } from 'react';
 
 function Navbar() {
@@ -10,50 +10,35 @@ function Navbar() {
         <>
             <Nav>
                 <NavLogo to='/'>Samuel</NavLogo>
-                <Bars onClick={openMenu} toggle={() => setOpen(!isOpen)}></Bars>
+                { !isOpen && <Bars onClick={openMenu} toggle={() => setOpen(!isOpen)}></Bars>}
+                { isOpen && <Cross onClick={openMenu} toggle={() => setOpen(!isOpen)}></Cross>}
 
                 {isOpen && <NavMenuMobile onClick={openMenu}>
-                    <NavLinkMobile>
-                        <Link onClick={openMenu} toggle={() => setOpen(isOpen)} to='about' spy={true} smooth={true}>
-                            ABOUT
-                        </Link>
+                    <NavLinkMobile onClick={openMenu} toggle={() => setOpen(isOpen)} to='about' spy={true} smooth={true}>
+                        ABOUT ME
                     </NavLinkMobile>
-                    <NavLinkMobile>
-                        <Link onClick={openMenu} toggle={() => setOpen(isOpen)} to='skills' spy={true} smooth={true}>
-                            SKILLS
-                        </Link>
+                    <NavLinkMobile onClick={openMenu} toggle={() => setOpen(isOpen)} to='skills' spy={true} smooth={true}>
+                        SKILLS
                     </NavLinkMobile>
-                    <NavLinkMobile>
-                        <Link onClick={openMenu} toggle={() => setOpen(isOpen)} to='projects' spy={true} smooth={true}>
-                            PROJECTS
-                        </Link>
+                    <NavLinkMobile onClick={openMenu} toggle={() => setOpen(isOpen)} to='projects' spy={true} smooth={true}>
+                        PROJECTS
                     </NavLinkMobile>
-                    <NavLinkMobile>
-                        <Link onClick={openMenu} toggle={() => setOpen(isOpen)} to='contact' spy={true} smooth={true}>
-                            CONTACT
-                        </Link>
+                    <NavLinkMobile onClick={openMenu} toggle={() => setOpen(isOpen)} to='contact' spy={true} smooth={true}>
+                        CONTACT
                     </NavLinkMobile>
                 </NavMenuMobile>}
                 <NavMenu>
-                    <NavLink>
-                        <Link to='about' spy={true} smooth={true}>
-                            ABOUT ME
-                        </Link>
+                    <NavLink to='about' spy={true} smooth={true}>
+                        ABOUT ME
                     </NavLink>
-                    <NavLink>
-                        <Link to='skills' spy={true} smooth={true}>
-                            SKILLS
-                        </Link>
+                    <NavLink to='skills' spy={true} smooth={true}>
+                        SKILLS
                     </NavLink>
-                    <NavLink>
-                        <Link to='projects' spy={true} smooth={true}>
-                            PROJECTS
-                        </Link>
+                    <NavLink to='projects' spy={true} smooth={true}>
+                        PROJECTS
                     </NavLink>
-                    <NavLink>
-                        <Link to='contact' spy={true} smooth={true}>
-                            CONTACT
-                        </Link>
+                    <NavLink to='contact' spy={true} smooth={true}>
+                        CONTACT
                     </NavLink>
                 </NavMenu>
             </Nav>

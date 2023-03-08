@@ -1,5 +1,6 @@
 import { FaBars } from 'react-icons/fa';
-import { NavLink as Link } from 'react-router-dom';
+import { BiX } from "react-icons/bi";
+import {Link} from 'react-scroll'
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
@@ -40,7 +41,7 @@ export const NavLogo = styled(Link)`
   }
 `;
 
-export const NavLink = styled.div`
+export const NavLink = styled(Link)`
   color: #000;
   display: flex;
   align-items: center;
@@ -91,6 +92,20 @@ export const Bars = styled(FaBars)`
   }
 `;
 
+export const Cross = styled(BiX)`
+  display: none;
+  color: #000;
+  @media screen and (max-width: 1068px) {
+    display: block;
+    position: absolute;
+    right: 0;
+    transform: scale(1.5) translate(-65%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 101;
+  }
+`;
+
 export const NavMenuMobile = styled.div`
   display: none;
   @media screen and (max-width: 1068px) {
@@ -105,10 +120,10 @@ export const NavMenuMobile = styled.div`
   }
 `;
 
-export const NavLinkMobile = styled.div`
+export const NavLinkMobile = styled(Link)`
   display: none;
   @media screen and (max-width: 1068px) {
-    top: 25%;
+    top: 100px;
     color: #000;
     text-decoration: none;
     display: block;

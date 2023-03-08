@@ -6,8 +6,26 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import MetaTags from 'react-meta-tags';
 import i94 from "../media/i94/i94.jpg";
 import devsite from "../media/logo512.png";
+import Contact from "../components/Contact/Contact"
 
+const about = "I'm a student at North Dakota Sate University currently studying computer engineer with a passion about software, electronics, and embedded systems. I love bringing things to life. I grew up watching series such as Iron Man and Star Wars and was always fascinated by the technology. Currently, I am looking for opportunities to expand my knowledge and gain experience in the computer engineering field or related fields.";
+const PDF_FILE_URL = "http://samuelswedberg.com/samuelswedbergresume.pdf"    
+    
 function Home() {
+    const downloadResume=(url)=>{
+        fetch(url)
+            .then((response)=>response.blob())
+            .then((blob)=>{
+                const blobURL = window.URL.createObjectURL(new Blob([blob]))
+                const fileName = url.split('/').pop();
+                const aTag = document.createElement('a');
+                aTag.href= blobURL;
+                aTag.setAttribute('download',fileName);
+                document.body.appendChild(aTag);
+                aTag.click();
+                aTag.remove();
+        })
+    }
     return (
         <>
             <MetaTags>
@@ -25,12 +43,12 @@ function Home() {
             </div>
             <div id="about" className="section">
                 <h2>About Me</h2>
-                    <div className="aboutContent">
-                        <p>I'm a student at North Dakota Sate University currently studying computer engineer with a passion about software, electronics, and embedded systems.</p>
-                        <p>I grew up watching movies like Iron Man and Star Wars. I love the </p>
-                        <p>Currently, I am looking for opportunities to expand my knowledge and gain experience in the computer engineering field or related fields.</p>
+                    <div className="wrapper">
+                        <div className="aboutContent">
+                            <p>{about}</p>
+                        </div>
                     </div>
-                <a className="resume" href="https://google.com" target="_blank" rel="noreferrer">DOWNLOAD MY RESUME</a>
+                <button className="resume" onClick={()=>{downloadResume(PDF_FILE_URL)}} target="_blank" rel="noreferrer">DOWNLOAD MY RESUME</button>
             </div>
             <div id="skills" className="section">
                 <h2>Skills</h2>
@@ -47,12 +65,12 @@ function Home() {
                     <div className="skillsContent">
                         <h3>Programming Languages</h3>
                         <ul>
-                            <li>Java</li>
                             <li>C, C++, C#</li>
                             <li>HTML, CSS</li> 
+                            <li>Python</li>
+                            <li>Java</li>
                             <li>JavaScript</li>
                             <li>React JS</li>
-                            <li>Python</li>
                         </ul>
                     </div>
                 </div>
@@ -61,18 +79,14 @@ function Home() {
                 <h2>Projects</h2>
                 <div className="wrapper">
                     <a className="projectsContent" href="https://lab.samuelswedberg.com/interstate94" target="_blank" rel="noreferrer">
-                        <div className="projectsImage">
-                            <img src={i94} alt="Interstate 94 Thumbnail"></img>
-                        </div>
+                        <img className="projectsImage" src={i94} alt="Interstate 94 Thumbnail"></img>
                         <div className="projectsText">
                             <h3>Interstate 94</h3>
                             <p>Pixel art racing game made in Unity</p>
                         </div>
                     </a>
                     <a className="projectsContent" href="https://lab.samuelswedberg.com" target="_blank" rel="noreferrer">
-                        <div className="projectsImage">
-                            <img src={devsite} alt="Devsite Thumbnail"></img>
-                        </div>
+                        <img className="projectsImage" src={devsite} alt="Devsite Thumbnail"></img>
                         <div className="projectsText">
                             <h3>Personal Devsite</h3>
                             <p>Location for all documentation for various projects</p>
@@ -83,7 +97,7 @@ function Home() {
             <div id="contact" className="section">
                 <h2>Contact</h2>
                 <div className="wrapper">
-                    <p>Yuhhh</p>
+                    <Contact/>
                 </div>
             </div>
         </>
