@@ -8,15 +8,16 @@ import i94 from "../media/i94/i94.jpg";
 import devsite from "../media/logo512.png";
 import Contact from "../components/Contact/Contact"
 
-const about = "I'm a student at North Dakota Sate University currently studying computer engineer with a passion about software, electronics, and embedded systems. I love bringing things to life. I grew up watching series such as Iron Man and Star Wars and was always fascinated by the technology. Currently, I am looking for opportunities to expand my knowledge and gain experience in the computer engineering field or related fields.";
-const PDF_FILE_URL = "http://samuelswedberg.com/samuelswedbergresume.pdf"    
-    
+const about = "I'm a student at North Dakota Sate University currently studying computer engineering with a passion about software, electronics, and embedded systems. I grew up watching series such as Iron Man and Star Wars and was always fascinated by the technology. I love using my imagination and creativity to bring concepts to life. Currently, I am looking for opportunities to expand my knowledge and gain experience in the computer engineering field or related fields.";
+const PDF_FILE_URL = "https://samuelswedberg.com/samuelswedbergresume.pdf"    
+//const PDF_FILE_URL = "http://localhost:3000/samuelswedbergresume.pdf"   
+
 function Home() {
     const downloadResume=(url)=>{
         fetch(url)
             .then((response)=>response.blob())
             .then((blob)=>{
-                const blobURL = window.URL.createObjectURL(new Blob([blob]))
+                const blobURL = window.URL.createObjectURL(new Blob([blob]));
                 const fileName = url.split('/').pop();
                 const aTag = document.createElement('a');
                 aTag.href= blobURL;
@@ -24,8 +25,8 @@ function Home() {
                 document.body.appendChild(aTag);
                 aTag.click();
                 aTag.remove();
-        })
-    }
+        });
+    };
     return (
         <>
             <MetaTags>
@@ -48,7 +49,7 @@ function Home() {
                             <p>{about}</p>
                         </div>
                     </div>
-                <button className="resume" onClick={()=>{downloadResume(PDF_FILE_URL)}} target="_blank" rel="noreferrer">DOWNLOAD MY RESUME</button>
+                <button className="resume" onClick={()=>{downloadResume(PDF_FILE_URL);}}>DOWNLOAD MY RESUME</button>
             </div>
             <div id="skills" className="section">
                 <h2>Skills</h2>
