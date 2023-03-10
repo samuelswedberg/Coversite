@@ -1,10 +1,15 @@
 import React from "react";
 import "../styles/Home.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { DiHtml5, DiCss3, DiJava, DiJavascript1, DiReact, DiPython, DiDocker, DiUnitySmall } from "react-icons/di";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { GiSolderingIron } from "react-icons/gi";
+import { TbCircuitResistor } from "react-icons/tb";
+import { SiUnrealengine, SiArduino } from "react-icons/si";
+import { IoLogoModelS } from "react-icons/io";
+import { SiCplusplus } from "react-icons/si";
 import MetaTags from 'react-meta-tags';
 import i94 from "../media/i94/i94.jpg";
+import { ReactComponent as Printer } from "../media/3d-printing.svg";
 import devsite from "../media/logo512.png";
 import Contact from "../components/Contact/Contact"
 
@@ -38,8 +43,8 @@ function Home() {
                 <h3>Computer Engineering Student - North Dakota State University</h3>
                 <ul>
                     {/* <li><a href="https://google.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></a></li> */}
-                    <li><a href="https://github.com/samuelswedberg" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></a></li>
-                    <li><a href='mailto:samuel.swedberg@ndsu.edu' target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></a></li>
+                    <li><a href="https://github.com/samuelswedberg" target="_blank" rel="noreferrer"><FaGithub/></a></li>
+                    <li><a href='mailto:samuel.swedberg@ndsu.edu' target="_blank" rel="noreferrer"><FaEnvelope/></a></li>
                 </ul>
             </div>
             <div id="about" className="section">
@@ -55,24 +60,55 @@ function Home() {
                 <h2>Skills</h2>
                 <div className="wrapper">
                     <div className="skillsContent">
-                        <h3>Technical Skills</h3>
-                        <ul>
-                            <li>3D Printing</li>
-                            <li>Soldering</li>
-                            <li>Electronics Design</li>
-                            <li>CAD</li>
-                        </ul>
+                        <h3>Programming Languages</h3>
+                            <div className="skillsList">
+                                <div>C, C++, C#</div><SiCplusplus/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Java</div><DiJava/>
+                            </div>
+                            <div className="skillsList">
+                                <div>HTML</div><DiHtml5/>
+                            </div>
+                            <div className="skillsList">
+                                <div>CSS</div><DiCss3/>
+                            </div>
+                            <div className="skillsList">
+                                <div>JavaScript</div><DiJavascript1/>
+                            </div>
+                            <div className="skillsList">
+                                <div>React</div><DiReact/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Python</div><DiPython/>
+                            </div>
                     </div>
                     <div className="skillsContent">
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>C, C++, C#</li>
-                            <li>HTML, CSS</li> 
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>React JS</li>
-                        </ul>
+                        <h3>Tools & Technologies</h3>
+                            <div className="skillsList">
+                                <div>3D Printing</div><Printer className="skillsIcon"/>
+                            </div>
+                            <div className="skillsList">
+                                <div>CAD</div><IoLogoModelS/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Soldering</div><GiSolderingIron/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Electronics Design</div><TbCircuitResistor/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Unreal Engine</div><SiUnrealengine/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Unity</div><DiUnitySmall/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Docker</div><DiDocker/>
+                            </div>
+                            <div className="skillsList">
+                                <div>Arduino</div><SiArduino/>
+                            </div>
                     </div>
                 </div>
             </div>

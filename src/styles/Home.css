@@ -8,6 +8,7 @@ h1 {
 h2 {
     font-size: 4rem;
     margin-bottom: 15px;
+    color: linear-gradient(321deg, rgba(2,0,36,0.29850672468354433) 0%, rgba(9,9,121,0.3080003955696202) 35%, rgba(0,212,255,0.3238231803797469) 100%);
 }
 
 h3 {
@@ -141,22 +142,35 @@ p {
 .skillsContent {
     padding: 20px;
     border-radius: 25px;
+    display: grid;
+    grid-gap: 16px;
     background-color: #fff;
     margin: 50px;
-    box-shadow: 0px 7px 10px 0px #808080;
+    width: 300px;
 }
 
-.skillsContent ul {
-    display: block;
-    column-count: 2;
-    margin: 0;
-}
-
-.skillsContent li {
-    padding: 10px;
-    padding-left: 0;
+.skillsList {
     text-align: left;
-    
+    display: grid;
+    grid-template-columns: 1fr 28px;
+    font-size: 22px;
+    color: #777777;
+}
+
+@media (max-width:991px) {
+    .skillsList {
+        font-size: 18px;
+    }
+}
+
+.skillsIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.skillsIcon path{
+    fill: #777777 !important;
+    stroke: #777777 !important; 
 }
 
 .projectsContent {
@@ -174,7 +188,7 @@ p {
         width: 300px;
     }
     .projectsContent:hover{
-        box-shadow: 0px 7px 10px 0px #808080;
+        box-shadow: 0px 7px 10px -2.5px #808080;
     }
     .projectsImage {
         width: 300px;
@@ -186,7 +200,7 @@ p {
         width: 400px;
     }
     .projectsContent:hover{
-        box-shadow: 0px 7px 10px 0px #808080;
+        box-shadow: 0px 7px 10px -2.5px #808080;
     }
     .projectsImage {
         width: 400px;
@@ -198,7 +212,7 @@ p {
         width: 400px;
     }
     .projectsContent:hover{
-        box-shadow: 0px 7px 10px 0px #808080;
+        box-shadow: 0px 7px 10px -2.5px #808080;
     }
     .projectsImage  {
         width: 400px;
@@ -211,7 +225,7 @@ p {
         width: 500px;
     }
     .projectsContent:hover{
-        box-shadow: 0px 7px 10px 0px #808080;
+        box-shadow: 0px 7px 10px -2.5px #808080;
     }
     .projectsImage {
         width: 500px;
