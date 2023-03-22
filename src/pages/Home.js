@@ -14,6 +14,7 @@ import devsite from "../media/logo512.png";
 import Contact from "../components/Contact/Contact"
 
 const about = "I'm a student at North Dakota Sate University currently studying computer engineering with a passion about software, electronics, and embedded systems. I grew up watching series such as Iron Man and Star Wars and was always fascinated by the technology. I love using my imagination and creativity to bring concepts to life. Currently, I am looking for opportunities to expand my knowledge and gain experience in the computer engineering field or related fields.";
+const skills = "A few skill areas I am experienced in are front-end web development using HTML, CSS, and JS, game design with Unity and Unreal, and OS virtualization utilizing Proxmox, Docker, and Kubernetes. Below is a brief list of the skills I have picked up so far. Currently, I am learning back-end technologies and professional web application practices.";
 const PDF_FILE_URL = "https://samuelswedberg.com/samuelswedbergresume.pdf"    
 //const PDF_FILE_URL = "http://localhost:3000/samuelswedbergresume.pdf"   
 
@@ -58,6 +59,11 @@ function Home() {
             </div>
             <div id="skills" className="section">
                 <h2>Skills</h2>
+                <div className="wrapper" style={{paddingBottom: "0", marginBottom: "0"}}>
+                    <div className="aboutContent" style={{textAlign: "left", display: "flex", marginBottom: "0"}}>
+                        <p style={{paddingBottom: "0", marginBottom: "0"}}>{skills}</p>
+                    </div>
+                </div>
                 <div className="wrapper">
                     <div className="skillsContent">
                         <h3>Programming Languages</h3>
