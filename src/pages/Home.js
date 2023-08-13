@@ -118,14 +118,14 @@ function Home() {
             <div id="projects" className="section">
                 <h2>Projects</h2>
                 <div className="wrapper">
-                    <a className="projectsContent" href="https://lab.samuelswedberg.com/interstate94" target="_blank" rel="noreferrer">
+                    <a className="projectsContent" href="https://dev.samuelswedberg.com/docs/interstate94" target="_blank" rel="noreferrer">
                         <img className="projectsImage" src={i94} alt="Interstate 94 Thumbnail"></img>
                         <div className="projectsText">
                             <h3>Interstate 94</h3>
                             <p>Pixel art racing game made in Unity</p>
                         </div>
                     </a>
-                    <a className="projectsContent" href="https://lab.samuelswedberg.com" target="_blank" rel="noreferrer">
+                    <a className="projectsContent" href="https://dev.samuelswedberg.com/" target="_blank" rel="noreferrer">
                         <img className="projectsImage" src={devsite} alt="Devsite Thumbnail"></img>
                         <div className="projectsText">
                             <h3>Personal Devsite</h3>
