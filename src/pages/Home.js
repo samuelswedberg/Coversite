@@ -7,14 +7,14 @@ import { TbCircuitResistor } from "react-icons/tb";
 import { SiUnrealengine, SiArduino } from "react-icons/si";
 import { IoLogoModelS } from "react-icons/io";
 import { SiCplusplus } from "react-icons/si";
-import MetaTags from 'react-meta-tags';
 import i94 from "../media/i94/i94.jpg";
 import { ReactComponent as Printer } from "../media/3d-printing.svg";
 import devsite from "../media/logo512.png";
 import Contact from "../components/Contact/Contact"
 
-const about = "I'm a student at North Dakota Sate University currently studying computer engineering with a passion about software, electronics, and embedded systems. I grew up watching series such as Iron Man and Star Wars and was always fascinated by the technology. I love using my imagination and creativity to bring concepts to life. Currently, I am looking for opportunities to expand my knowledge and gain experience in the computer engineering field or related fields.";
-const skills = "A few skill areas I am experienced in are front-end web development using HTML, CSS, and JS, game design with Unity and Unreal, and OS virtualization utilizing Proxmox, Docker, and Kubernetes. Below is a brief list of the skills I have picked up so far. Currently, I am learning back-end technologies and professional web application practices.";
+const about1 = "I am a dedicated student pursuing a degree in computer engineering at North Dakota State University. My areas of expertise and keen interests encompass software development, electronics, and embedded systems. My early exposure to influential series like Iron Man and Star Wars has instilled in me a profound fascination with advanced technology.";
+const about2 = "I am driven by a passion for translating ideas into reality and take great pleasure in exercising my imagination and creativity to achieve this goal. At present, I am actively seeking opportunities to further augment my knowledge and acquire hands-on experience within the realm of computer engineering or any related field.";
+const skills = "A few skill areas I am experienced in are front-end web development using HTML, CSS, and JS, game design with Unity and Unreal, and OS virtualization utilizing Proxmox and Docker. Below is a brief list of the skills I have picked up so far. Currently, I am learning back-end technologies with professional web application practices and working on my next game.";
 const PDF_FILE_URL = "https://samuelswedberg.com/samuelswedbergresume.pdf"    
 //const PDF_FILE_URL = "http://localhost:3000/samuelswedbergresume.pdf"   
 
@@ -35,10 +35,6 @@ function Home() {
     };
     return (
         <>
-            <MetaTags>
-                <title>Samuel Swedberg</title>
-                <meta name="description" content="Personal website for Samuel Swedberg" />
-            </MetaTags>
             <div id="hero" className="hero">
                 <h1>Samuel Swedberg</h1>
                 <h3>Computer Engineering Student - North Dakota State University</h3>
@@ -52,7 +48,8 @@ function Home() {
                 <h2>About Me</h2>
                     <div className="wrapper">
                         <div className="aboutContent">
-                            <p>{about}</p>
+                            <p>{about1}</p>
+                            <p>{about2}</p>
                         </div>
                     </div>
                 <button className="resume" onClick={()=>{downloadResume(PDF_FILE_URL);}}>DOWNLOAD MY RESUME</button>
