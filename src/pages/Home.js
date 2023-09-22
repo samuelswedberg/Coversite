@@ -47,7 +47,7 @@ function Home() {
                 <h1>Samuel Swedberg</h1>
                 <h3>Computer Engineering Student - North Dakota State University</h3>
                 <ul>
-                    {/* <li><a href="https://google.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></a></li> */}
+                    <li><a href="https://www.linkedin.com/in/samuelswedberg/" target="_blank" rel="noreferrer"><FaLinkedin/></a></li>
                     <li><a href="https://github.com/samuelswedberg" target="_blank" rel="noreferrer"><FaGithub/></a></li>
                     <li><a href='mailto:samuel.swedberg@ndsu.edu' target="_blank" rel="noreferrer"><FaEnvelope/></a></li>
                 </ul>
