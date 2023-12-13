@@ -4,7 +4,7 @@ import { AiOutlineTeam, AiFillClockCircle} from "react-icons/ai";
 import { BsArrowRepeat } from "react-icons/bs";
 import { DiHtml5, DiCss3, DiJava, DiJavascript1, DiReact, DiPython, DiDocker, DiUnitySmall, DiLinux} from "react-icons/di";
 import { FaLinkedin, FaGithub, FaEnvelope} from "react-icons/fa";
-import { GiSolderingIron } from "react-icons/gi";
+import { GiSolderingIron, GiProcessor } from "react-icons/gi";
 import { TbCircuitResistor, TbBrandNextjs} from "react-icons/tb";
 import { SiUnrealengine, SiArduino, SiCplusplus} from "react-icons/si";
 import { MdReportProblem, MdComputer } from "react-icons/md";
@@ -13,14 +13,16 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { SlOrganization } from "react-icons/sl";
 import i94 from "../media/projects/i94.jpg";
 import lt from "../media/projects/lt.png";
+import ece376 from "../media/projects/ece376.png";
 import { ReactComponent as Printer } from "../media/3d-printing.svg";
+
 import devsite from "../media/logo512.png";
 import Contact from "../components/Contact/Contact"
 
 const about1 = "I am a dedicated student pursuing a degree in computer engineering at North Dakota State University. My areas of expertise and interests encompass software development, electronics, and embedded systems. My early exposure to influential series like Iron Man and Star Wars has instilled in me a profound fascination with technology.";
 const about2 = "I am driven by a passion for taking ideas and making them into reality, and take great pleasure in exercising my imagination and creativity to achieve this goal. At present, I am actively seeking opportunities to further my knowledge and acquire hands-on experience within the realm of computer engineering, software engineering or any related field.";
 const skills1 = "I possess a diverse skill set encompassing primarily front-end web development, game development, electronic design, and homelab systems. Listed below is a brief summary of the skills I have acquired:";
-const skills2 = "Currently this semester, I am taking classes about embedded systems and FPGA development using VHDL. During my free time, I am working on a web application project with another student to continue improving my skills in software engineering.";
+const skills2 = "Currently this semester, I am taking classes about signals and systems and operating system concepts. During my free time, I am working on a web application project to continue improving my skills in software engineering.";
 const projects1 = "Below is a brief list of the projects I have worked on. A full list with documentation on past and current projects can be "
 const contact = "Feel free to reach out to me using the contact form below. I'm always eager to connect and engage in meaningful conversations. Whether you have a question or just want to say hello, I'd be delighted to hear from you."
 const PDF_FILE_URL = "https://samuelswedberg.com/samuelswedbergresume.pdf"    
@@ -40,7 +42,7 @@ function Home() {
                 aTag.click();
                 aTag.remove();
         });
-    };
+    };  
     return (
         <>
             <div id="hero" className="hero">
@@ -85,7 +87,7 @@ function Home() {
                                 <div>React JS</div><DiReact/>
                             </div>
                             <div className="skillsList">
-                                <div>Next JS</div><TbBrandNextjs/>
+                                <div>VHDL</div><GiProcessor/>
                             </div>
                             <div className="skillsList">
                                 <div>Python</div><DiPython/>
@@ -160,20 +162,30 @@ function Home() {
                     </div>
                 </div>
                 <div className="wrapper">
-                    <a className="projectsContent" href="https://dev.samuelswedberg.com/docs/interstate94" target="_blank" rel="noreferrer">
+                    <div className="projectsContent" href="https://dev.samuelswedberg.com/docs/ece376" target="_blank" rel="noreferrer">
+                        <img className="projectsImage" src={ece376} alt="ECE376 Thumbnail"></img>
+                        <div className="projectsText">
+                            <h3>NDSU Embedded Systems Project</h3>
+                            <p>Term Project for my embedded systems course at NDSU</p>
+                            <a className="projectsBtn" href="https://dev.samuelswedberg.com/docs/ece376" target="_blank">VIEW MORE</a>
+                        </div>
+                    </div>
+                    <div className="projectsContent" href="https://dev.samuelswedberg.com/docs/lavellestint" target="_blank" rel="noreferrer">
+                        <img className="projectsImage" src={lt} alt="Devsite Thumbnail"></img>
+                        <div className="projectsText">
+                            <h3>Freelance Website</h3>
+                            <p>Website for local small business made using React JS and Bootstrap 5</p>
+                            <a className="projectsBtn" href="https://dev.samuelswedberg.com/docs/lavellestint" target="_blank">VIEW MORE</a>
+                        </div>
+                    </div>
+                    <div className="projectsContent" href="https://dev.samuelswedberg.com/docs/interstate94" target="_blank" rel="noreferrer">
                         <img className="projectsImage" src={i94} alt="Interstate 94 Thumbnail"></img>
                         <div className="projectsText">
                             <h3>Interstate 94</h3>
                             <p>Pixel art racing game made in Unity</p>
+                            <a className="projectsBtn" href="https://dev.samuelswedberg.com/docs/interstate94" target="_blank">VIEW MORE</a>
                         </div>
-                    </a>
-                    <a className="projectsContent" href="https://dev.samuelswedberg.com/docs/lavellestint" target="_blank" rel="noreferrer">
-                        <img className="projectsImage" src={lt} alt="Devsite Thumbnail"></img>
-                        <div className="projectsText">
-                            <h3>Lavelle's Tint</h3>
-                            <p>Website for local small business made using React JS and Bootstrap 5</p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div id="contact" className="section">
